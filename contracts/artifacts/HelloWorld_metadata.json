@@ -6,7 +6,13 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
 				"name": "sayHello",
 				"outputs": [
 					{
@@ -65,11 +71,11 @@
 	},
 	"sources": {
 		"contracts/test.sol": {
-			"keccak256": "0x71c1430646836c73701d8ca5470c172cc90ef8cebb16ebfe79d82f40a497932e",
+			"keccak256": "0xf84550eb8296af9fb3ec0be19c081c7c50f8aaccd62ce5ecd9fb27ff681849cd",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://57b85aab9c89549c7769305145790295441c839623970caabd01727bb3b480c5",
-				"dweb:/ipfs/QmXJvvwgztmRbRVvtoVfNKm55DWtutVJLEPx8do2p6oxLR"
+				"bzz-raw://39d3abbc9e22f2482086ff606641130e04c421fb8a60db637317c504f343d8cd",
+				"dweb:/ipfs/QmVj2n2NibpyMWUu3mtRJaxi1n3KEUuQQ623jok1WRdPbq"
 			]
 		}
 	},
