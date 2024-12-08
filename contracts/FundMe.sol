@@ -3,9 +3,6 @@ pragma solidity ^0.8.7;
 
 import {AggregatorV3Interface} from "@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol";
 
-
-
-
 contract FundMe {
     mapping(address => uint256) public funderToAmount;
 
@@ -70,6 +67,7 @@ contract FundMe {
             "target is not reached"
         );
     }
+
     // 3.在锁定期内达到目标值，生产可以提款
     // 4.在锁定期内没有达到目标值，投资人可以退款
     function getFund() external {
@@ -82,8 +80,13 @@ contract FundMe {
             "this function can only be called by owner"
         );
         //  transfer 纯转账 transfer ETH  and revert if tx failed
-        payable(msg.sender).transfer(address(this).balance);
-        // send
-        // call
+        // payable(msg.sender).transfer(address(this).balance);
+        // send  纯转账 transfer ETH  and return false if failed
+        // bool success = payable(msg.sender).send(address(this).balance);
+        // require(success, "tx failed");
+        // call transfer ETH  with data return value of function and bool
+        bool success;
+        (success, ) = payable(msg.sender).call{value: address(this).balance}("");
+        require(success,"tx failed");
     }
 }
