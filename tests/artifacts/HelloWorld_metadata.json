@@ -56,7 +56,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/test.sol": "HelloWorld"
+			"tests/test.sol": "HelloWorld"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -70,12 +70,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/test.sol": {
-			"keccak256": "0xf84550eb8296af9fb3ec0be19c081c7c50f8aaccd62ce5ecd9fb27ff681849cd",
+		"tests/test.sol": {
+			"keccak256": "0x02de18f7d7706307fd25a9403944c851f4ffd66e836dde408e3e37fa86c81332",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://39d3abbc9e22f2482086ff606641130e04c421fb8a60db637317c504f343d8cd",
-				"dweb:/ipfs/QmVj2n2NibpyMWUu3mtRJaxi1n3KEUuQQ623jok1WRdPbq"
+				"bzz-raw://2c3604985f6b31556c1f7ecba45208d4f031db77bc4ebea16560785ac37ef806",
+				"dweb:/ipfs/QmUApUHhUDYXvjoHfE4tqHX4Yc7ZjyKW2Ju5dnrm3mNMVn"
 			]
 		}
 	},
