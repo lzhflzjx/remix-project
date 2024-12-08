@@ -53,6 +53,19 @@
 				"inputs": [],
 				"name": "getFund",
 				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
 				"stateMutability": "view",
 				"type": "function"
 			},
@@ -110,11 +123,11 @@
 			]
 		},
 		"contracts/FundMe.sol": {
-			"keccak256": "0x863afb4ad0518d79fc6c04bcf565c2f71f7ce37c95604366d72de9edac38a9f8",
+			"keccak256": "0x22918e67fd777da3d15a38eb1559f0ede9f2a2f5107a84586c22527c2d68d9c9",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://50c9f5f14aeb09a7333314b120c27fd8671bcd725406e45259a26d1eb29b77e9",
-				"dweb:/ipfs/QmQSyUwYURKk1XutkM5P63CvCc8ZnBEzzJsSwBAJMjmSyL"
+				"bzz-raw://42758601319eebb852e83b3fdab4544e9dfa953b388c957b05d71bdd7260d8de",
+				"dweb:/ipfs/Qmcc3peZysff5pksoyqhtnoxPVMG3cp3yBJrcUJG3aD2La"
 			]
 		}
 	},
