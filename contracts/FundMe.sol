@@ -69,7 +69,6 @@ contract FundMe {
     }
 
     // 3.在锁定期内达到目标值，生产可以提款
-    // 4.在锁定期内没有达到目标值，投资人可以退款
     function getFund() external {
         require(
             convertEthToUsd(address(this).balance) >= TARGET,
@@ -86,7 +85,25 @@ contract FundMe {
         // require(success, "tx failed");
         // call transfer ETH  with data return value of function and bool
         bool success;
-        (success, ) = payable(msg.sender).call{value: address(this).balance}("");
-        require(success,"tx failed");
+        (success, ) = payable(msg.sender).call{value: address(this).balance}(
+            ""
+        );
+        require(success, "transfer tx failed");
+    }
+
+    // 4.在锁定期内没有达到目标值，投资人可以退款
+    function reFund() external {
+        require(
+            convertEthToUsd(address(this).balance) < TARGET,
+            "target is reached"
+        );
+
+        uint256 amount = funderToAmount[msg.sender];
+        require(amount != 0, "there is not fund for you");
+        bool success;
+        (success, ) = payable(msg.sender).call{
+            value: funderToAmount[msg.sender]
+        }("");
+        require(success, "transfer tx failed");
     }
 }
