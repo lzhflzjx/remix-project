@@ -6,7 +6,13 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_lockTime",
+						"type": "uint256"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
@@ -98,6 +104,9 @@
 		"userdoc": {
 			"kind": "user",
 			"methods": {
+				"fund()": {
+					"notice": "1.创建一个收款函数"
+				},
 				"getChainlinkDataFeedLatestAnswer()": {
 					"notice": "Returns the latest answer."
 				}
@@ -130,11 +139,11 @@
 			]
 		},
 		"contracts/FundMe.sol": {
-			"keccak256": "0x0d9ecb4279865ec4e984be5d10bbd0eb55ee63be535610c722ddd8f80cd27806",
+			"keccak256": "0xf04972475a933b368224badefb1e209d23fcfb1e49bd2901b48d04e9de042f66",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://bd2553fe177d072a9f27fd37878c35a31b1b7a58125f335df5a255b0cb98e073",
-				"dweb:/ipfs/QmSgXRTLMg5pALn5rF9dnriszuNJVLPE6tyENu6Jvgnw2d"
+				"bzz-raw://5ff738c34e5d2ec45b230b558e8a3d000c14aebd587b3900cd5c6b20fba19cc2",
+				"dweb:/ipfs/QmPxS1gmAu7V3X2QfcvNHdECiZFm6y7Us7hPHD1wZ3N9Lq"
 			]
 		}
 	},
