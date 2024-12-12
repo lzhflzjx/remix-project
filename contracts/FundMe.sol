@@ -20,6 +20,8 @@ contract FundMe {
     uint256 lockTime;
 
     address erc20Addr;
+    // 查看getFuncd是否成功了
+    bool public getFundSuccess = false;
 
     constructor(uint256 _lockTime) {
         // sepolia-testnet
@@ -97,6 +99,8 @@ contract FundMe {
         require(success, "transfer tx failed");
 
         funderToAmount[msg.sender] = 0;
+        // 提款成功了
+        getFundSuccess = true;
     }
 
     // 4.在锁定期内没有达到目标值，投资人可以退款
@@ -117,7 +121,7 @@ contract FundMe {
         // 安全问题：退款后将余额置为0
         funderToAmount[msg.sender] = 0;
     }
-
+    // 修改mapping--funderToAmount的地址且仅Erc20有权限
     function setFunderToAmount(address funder,uint256 amountToUpdate) external {
         require(msg.sender == erc20Addr,"you do not have permission to call this function");
         funderToAmount[funder] = amountToUpdate;

@@ -220,6 +220,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountToClaim",
+						"type": "uint256"
+					}
+				],
+				"name": "claim",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "decimals",
 				"outputs": [
@@ -504,19 +517,19 @@
 			]
 		},
 		"contracts/FundMe.sol": {
-			"keccak256": "0xf04972475a933b368224badefb1e209d23fcfb1e49bd2901b48d04e9de042f66",
+			"keccak256": "0x34976fcd456702d0c2f1042bc6d7e858332c2a7e5c9698baba267b4a1888ea13",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5ff738c34e5d2ec45b230b558e8a3d000c14aebd587b3900cd5c6b20fba19cc2",
-				"dweb:/ipfs/QmPxS1gmAu7V3X2QfcvNHdECiZFm6y7Us7hPHD1wZ3N9Lq"
+				"bzz-raw://a3f63fd3de5b164f92995343e969bc1e1a3f68db95ffa99da1b251a66a5b3408",
+				"dweb:/ipfs/QmbAQg3JHYgmtT4drySW8LNRDTurDtTjpoc99VyJtpf7D6"
 			]
 		},
 		"contracts/FundTokenErc20.sol": {
-			"keccak256": "0xb79a55886ece106af83138d42965cf79d42ac4e52f1865376287824dd983b432",
+			"keccak256": "0xbc5d9ef283d0f6c3b504add85ccf12c9d512653a6bc804b023232662b4231948",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2dbc5306f3b4d92f3782d1b0888bdfd0d491abd10f55d50715bb20d4a679c3ad",
-				"dweb:/ipfs/Qmb2W6wdugj1QjDUCHLhGvTD74JKcLSvR5MjEmYFpbbxPh"
+				"bzz-raw://de5f323c4a96eeae9c3a3d6846d254c65fa37836764a81a6a3b7afd57ec2bdf8",
+				"dweb:/ipfs/QmbTuvLkWTkTTFzRCk5L3WKinZXgoUUWjK5TXofvp3xZQ6"
 			]
 		}
 	},
