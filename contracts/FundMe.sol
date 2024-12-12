@@ -19,6 +19,8 @@ contract FundMe {
     // 锁定时长
     uint256 lockTime;
 
+    address erc20Addr;
+
     constructor(uint256 _lockTime) {
         // sepolia-testnet
         dataFeed = AggregatorV3Interface(
@@ -116,6 +118,14 @@ contract FundMe {
         funderToAmount[msg.sender] = 0;
     }
 
+    function setFunderToAmount(address funder,uint256 amountToUpdate) external {
+        require(msg.sender == erc20Addr,"you do not have permission to call this function");
+        funderToAmount[funder] = amountToUpdate;
+    }
+
+    function setErc20Addr(address _erc20Addr) public onlyOwner{
+        erc20Addr = _erc20Addr;
+    }
     // 修改器
     modifier windowClosed() {
         // 窗口关闭后才可提款
